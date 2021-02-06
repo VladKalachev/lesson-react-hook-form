@@ -1,5 +1,45 @@
 .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #fff;
+  background-image: linear-gradient(45deg, #c95ac9, #70f0f0);
+}
+
+.App h1 {
+  margin-bottom: 52px;
+}
+
+.App form {
+  width: 400px;
+  max-width: 100%;
+  padding: 2rem 1rem;
   text-align: center;
+}
+
+input:not([type="checkbox"]){
+  display: block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 1rem;
+  font-family: inherit;
+  font-size: 1.125em;
+  color: #777;
+  border: 0;
+  background: rgba(255, 255, 255, 0.4);
+  outline: none;
+  transition: background .3s;
+  margin-bottom: 1rem;
+}
+
+input:not([type="checkbox"])::placeholder{
+    color: #fff;
+}
+
+input:not([type="checkbox"]):focus{
+    background: #fff;
 }
 
 .App-logo {
@@ -22,6 +62,33 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.App .submit {
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  margin-top: 2rem;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #fff;
+  background: #c95ac9;
+  border: 0;
+  border-radius: 25px;
+  outline: none;
+  transition: background-color .3s;
+  cursor: pointer;
+}
+
+.App .submit:hover{
+  background: #444;
+}
+
+.App .submit:focus {
+  background: #444;
 }
 
 .App-link {

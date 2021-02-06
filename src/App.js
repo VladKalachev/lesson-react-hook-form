@@ -2,22 +2,26 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <form onSubmit={handleSubmit}>
+        <h1>Регистрация</h1>
+        
+        <input placeholder="Имя" type="text" name="firstName" />
+
+        <input placeholder="Фамилия" type="text" name="lastName" />
+
+        <input placeholder="Возраст" type="text" name="age" />
+
+        <input placeholder="Пол" type="text" name="gender" />
+       
+        <input className="submit" type="submit" value="Войти" />
+      </form>
     </div>
   );
 }
