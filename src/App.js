@@ -35,13 +35,11 @@ function App() {
           name="age"
           />
 
-        <input 
-          ref={register} 
-          placeholder="Пол" 
-          type="text" 
-          name="gender"
-          />
-       
+        <select name="gender" ref={register} placeholder="Пол">
+          <option value="female">Женский</option>
+          <option value="male">Мужской</option>
+        </select>
+
         <input className="submit" type="submit" value="Войти" />
       </form>
     </div>
